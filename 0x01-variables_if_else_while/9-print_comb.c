@@ -1,0 +1,26 @@
+/*
+ * 9-print_comb.c
+ *
+ *  Created on: Jan 1, 2024
+ *      Author: absheriff
+ */
+#include <stdio.h>
+/**
+ * main - prints numbers separated by , and space
+ * Return: success
+ */
+int main(void)
+{
+	int c;
+	for (c = '0'; c <= '9'; c++)
+	{
+		putchar(c);
+		if (c != '9')
+		{
+			putchar(',');
+			putchar(' ');
+		}
+	}
+	putchar('\n');
+	return (0);
+}
