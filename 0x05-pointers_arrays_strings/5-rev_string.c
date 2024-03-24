@@ -16,14 +16,13 @@
  */
 void rev_string(char *s)
 {
-	int slen = 0;
+	long int slen = 0;
 	int x = 0;
 	char sc[10];
 
 	while (s[slen] != '\0')
 		slen++;
 	slen -= 1;
-/*	char sc[slen]; */
 
 	while (slen >= 0)
 	{
