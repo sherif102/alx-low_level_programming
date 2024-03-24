@@ -23,7 +23,7 @@ void rev_string(char *s)
 	while (s[slen] != '\0')
 		slen++;
 	slen -= 1;
-//	char sc[slen];
+/*	char sc[slen]; */
 
 	while (slen >= 0)
 	{
