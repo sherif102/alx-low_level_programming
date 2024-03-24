@@ -16,9 +16,9 @@
  */
 void rev_string(char *s)
 {
-	long int slen = 0;
-	long int x = 0;
-	char sc[10];
+	int slen = 0;
+	int x = 0;
+	char sc[1000];
 
 	while (s[slen] != '\0')
 		slen++;
