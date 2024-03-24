@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /*
  * 5-rev_string.c
  *
