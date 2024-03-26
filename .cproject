@@ -42,8 +42,6 @@
 					</folderInfo>
 					<sourceEntries>
 						<entry excluding="0x17-doubly_linked_lists|0x18-dynamic_libraries|0x05-pointers_arrays_strings/6-puts2.c|0x05-pointers_arrays_strings/5-rev_string.c|0x05-pointers_arrays_strings/sorter.c|0x05-pointers_arrays_strings/4-print_rev.c|0x05-pointers_arrays_strings/3-puts.c|0x05-pointers_arrays_strings/2-strlen.c|0x05-pointers_arrays_strings/1-swap.c|0x05-pointers_arrays_strings/0-reset_to_98.c|0x14-bit_manipulation|0x04-more_functions_nested_loops|0x03-debugging|0x02-functions_nested_loops|0x01-variables_if_else_while|0x00-hello_world" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="0x17-doubly_linked_lists"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="0x18-dynamic_libraries"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
