@@ -28,5 +28,4 @@ void puts_half(char *str)
 		slen++;
 	}
 	_putchar('\n');
-	_putchar(x + '0');
 }
