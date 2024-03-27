@@ -11,6 +11,7 @@
  * @src: string source
  * x: iterator
  * xc: copied iterator
+ * Return: dest
  */
 char *_strcpy(char *dest, char *src)
 {
@@ -20,13 +21,12 @@ char *_strcpy(char *dest, char *src)
 	while (src[x] != '\0')
 		x++;
 
-	while (xc <= x)
+	while (xc < x)
 	{
 		dest[xc] = src[xc];
 		xc++;
 	}
-
-	dest[xc + 1] = '\0';
+	dest[x] = src[x];
 
 	return (dest);
 }
