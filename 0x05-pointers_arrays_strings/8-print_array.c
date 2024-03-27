@@ -7,7 +7,7 @@
  *      Author: absheriff
  */
 /**
- * print_arrays - prints the n numbers of element from an array
+ * print_array - prints the n numbers of element from an array
  * @a: passed array
  * @n: number of elements to be printed
  * x: iterator
