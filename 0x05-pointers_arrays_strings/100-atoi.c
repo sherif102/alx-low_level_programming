@@ -49,14 +49,7 @@ int _atoi(char *s)
 			if (((s[cx] >= 48) && (s[cx] <= 57)) || ((s[x + 1] == '\0')))
 				break;
 		}
-/**
-		if ((((s[x + 1] < 48) || (s[x + 1] > 57)) || (s[x + 1] == '\0')) && ((s[cx] >= 48) && (s[cx] <= 57)))
-					break;
-
-		if ((((s[x + 1] < 48) || (s[x + 1] > 57)) || (s[x + 1] == '\0')) && ((s[cx] >= 48) && (s[cx] <= 57)))
-			break;
-*/
 		x++;
 	}
-	return (result * sign);
+	return (result * (sign));
 }
