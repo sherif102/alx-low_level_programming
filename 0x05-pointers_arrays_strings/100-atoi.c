@@ -14,7 +14,8 @@
  */
 int _atoi(char *s)
 {
-	int x = 0, digit = 0, r = 0, result = 0;
+	int x = 0, digit = 0, r = 0;
+	unsigned int result = 0;
 	int int_count = 48;
 	int cx;
 	int sign = 1;
