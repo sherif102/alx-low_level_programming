@@ -9,6 +9,8 @@
  * _strcat - concatenates strings together
  * @dest: string destination
  * @src: string source
+ * i: dest iterator
+ * x: src iterator
  */
 char *_strcat(char *dest, char *src)
 {
@@ -24,5 +26,6 @@ char *_strcat(char *dest, char *src)
 		x++;
 		i++;
 	}
+
 	return (dest);
 }
