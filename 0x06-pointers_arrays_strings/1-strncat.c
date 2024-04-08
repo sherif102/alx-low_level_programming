@@ -9,6 +9,7 @@
  * _strncat - concatenates strings together
  * @dest: string destination
  * @src: string source
+ * @n: bits of characters to be copied
  * Return: pointer to the destination
  */
 char *_strncat(char *dest, char *src, int n)
