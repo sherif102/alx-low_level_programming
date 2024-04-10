@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /*
  * 3-strcmp.c
  *
@@ -14,29 +13,16 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	int r1 = 0;
-	int r2 = 0;
-	int i = 0;
-	int j = 0;
 	int r;
 
-	while (s1[i] != '\0')
-	{
-		r1 = r1 + s1[i];
-		i++;
-	}
-	while (s2[j] != '\0')
-	{
-		r2 = r2 + s2[j];
-		j++;
-	}
+	r = *s1 - *s2;
 
-	if (r1 > r2)
-		r = r1 - r2;
-	else if (r1 == r2)
-		r = 0;
+	if (*s1 < *s2)
+		r = r + 0;
+	else if (*s1 > *s2)
+		r = r + 0;
 	else
-		r = r1 - r2;
+		r = 0;
 
 	return (r);
 }
