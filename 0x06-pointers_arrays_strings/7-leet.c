@@ -12,20 +12,19 @@
  */
 char *leet(char *c)
 {
+	int j;
 	int i = 0;
+	int n[24] = {52, 51, 48, 55, 49};
+	char cs[6] = "aeotl";
+	char cc[6] = "AEOTL";
 
 	while (c[i] != '\0')
 	{
-		if ((c[i] == 'a') || (c[i] == 'A'))
-			c[i] = 52;
-		else if ((c[i] == 'e') || (c[i] == 'E'))
-			c[i] = 51;
-		else if ((c[i] == 'o') || (c[i] == 'O'))
-			c[i] = 48;
-		else if ((c[i] == 't') || (c[i] == 'T'))
-			c[i] = 55;
-		else if ((c[i] == 'l') || (c[i] == 'L'))
-			c[i] = 49;
+		for (j = 0; j < 5; j++)
+		{
+			if ((c[i] == cs[j]) || (c[i] == cc[j]))
+				c[i] = n[j];
+		}
 
 		i++;
 	}
