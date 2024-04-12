@@ -1,15 +1,18 @@
-#include <stdio.h>
 #include "main.h"
-/*
- * main.c
- *
- *  Created on: Feb 2, 2024
- *      Author: absheriff
- */
+#include <stdio.h>
+
 /**
- * main - used to test each of the functions in this file
+ * main - check the code.
+ *
+ * Return: Always 0.
  */
 int main(void)
 {
+    char c;
 
+    c = 'A';
+    printf("%c: %d\n", c, _isupper(c));
+    c = 'a';
+    printf("%c: %d\n", c, _isupper(c));
+    return (0);
 }
