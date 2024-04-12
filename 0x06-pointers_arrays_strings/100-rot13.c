@@ -20,13 +20,12 @@ char *rot13(char *c)
 		{
 			if ((c[i] + 13 > 122) || ((c[i] + 13 > 90) && (c[i] + 13 < 104)))
 				c[i] = (c[i] + 13) - 26;
-			else
-				c[i] = c[i] + 13;
+
 			break;
 		}
 
 		i++;
-	}
+}
 
 	return (c);
 }
