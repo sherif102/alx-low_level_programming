@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
 /*
  * 103-infinite_add.c
@@ -19,6 +20,8 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	int i;
 	int j;
 	int x;
+
+	*r = size_r - 1;
 
 	i = atoi(n1);
 	j = atoi(n2);
