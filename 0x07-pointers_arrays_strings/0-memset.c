@@ -10,7 +10,7 @@
  * @s: buffer location
  * @b: buffer content
  * @n: number of buffers to be filled
- * Return: buffer pointer
+ * Return: pointer to s
  */
 char *_memset(char *s, char b, unsigned int n)
 {
