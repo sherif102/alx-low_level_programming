@@ -34,10 +34,10 @@ char *_strpbrk(char *s, char *accept)
 		j = 0;
 		i++;
 	}
-	if (s[i] == accept[j])
-		s = s + i;
-	else
+	if ((s[i] != accept[j]) || (s[i] == '\0'))
 		s = '\0';
+	else
+		s = s + i;
 
 	return (s);
 }
