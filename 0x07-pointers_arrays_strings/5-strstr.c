@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /*
  * 5-strstr.c
  *
@@ -14,10 +13,8 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	unsigned int i = 0; /* j = 0, x = 0, z = 0; */
-	unsigned int j = 0;
+	unsigned int i = 0, j = 0, z = 0;
 	unsigned int x;
-	unsigned int z = 0;
 	unsigned int y = -1;
 
 	while (haystack[i] != '\0')
@@ -27,9 +24,6 @@ char *_strstr(char *haystack, char *needle)
 	{
 		for (x = 0; x < i; x++)
 		{
-			printf("%d\n", j);
-			printf("%d\n", x);
-
 			if (needle[j] == haystack[x])
 			{
 				while ((needle[j + z] == haystack[x + z]) && (needle[j] == needle[0]))
@@ -42,7 +36,6 @@ char *_strstr(char *haystack, char *needle)
 							break;
 						}
 					}
-					printf("%d\n", j);
 					z++;
 				}
 				z = 0;
@@ -56,8 +49,6 @@ char *_strstr(char *haystack, char *needle)
 	}
 
 	haystack = haystack + y;
-
-	printf("%d\n", y);
 
 	if (y == -1)
 		haystack = '\0';

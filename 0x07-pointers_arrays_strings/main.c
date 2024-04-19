@@ -1,5 +1,5 @@
+#include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
 
 char *_strstr(char *, char *);
 
@@ -11,7 +11,7 @@ char *_strstr(char *, char *);
 int main(void)
 {
 	char *s = "First, solve the problem. Then, write the code.";
-	char *f = "solve";
+	char *f = "School";
 	char *t;
 
 	t = _strstr(s, f);
