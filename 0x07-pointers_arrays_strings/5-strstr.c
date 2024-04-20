@@ -20,34 +20,42 @@ char *_strstr(char *haystack, char *needle)
 	while (haystack[i] != '\0')
 		i++;
 
-	while (needle[j] != '\0')
+	for (x = 0; x < i; x++)
 	{
-		for (x = 0; x < i; x++)
+		if (needle[j] == haystack[x])
 		{
-			if (needle[j] == haystack[x])
+			while (needle[j + z] == haystack[x + z])
 			{
-				while ((needle[j + z] == haystack[x + z]) && (needle[j] == needle[0]))
+				if (needle[j] == needle[0])
 				{
-					if ((haystack[x + (z + 1)] == ' ') || (haystack[x + (z + 1)] == '\0'))
+					if ((haystack[x - 1] == ' ') || (haystack[x - 1] == '\0'))
 					{
-						if (needle[j + (z + 1)] == '\0')
+						if (haystack[x + (z + 1)] == ' ')
 						{
-							y = x;
-							break;
+							if (needle[j + (z + 1)] == '\0')
+							{
+								y = x;
+								break;
+							}
+						}
+
+						if (haystack[x + (z + 1)] == '\0')
+						{
+							if (needle[j + (z + 1)] == '\0')
+							{
+								y = x;
+								break;
+							}
 						}
 					}
-					z++;
 				}
-				z = 0;
+				z++;
 			}
-			if (y == x)
-				break;
+			z = 0;
 		}
-		j++;
 		if (y == x)
 			break;
 	}
-
 	haystack = haystack + y;
 
 	if (y == -1)
