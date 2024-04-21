@@ -38,6 +38,8 @@ char *_strstr(char *haystack, char *needle)
 			}
 			z = 0;
 		}
+		if (needle[0] == '\0')
+			break;
 		if (y == x)
 			break;
 	}
