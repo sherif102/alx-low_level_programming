@@ -23,7 +23,10 @@ char *_strstr(char *haystack, char *needle)
 	for (x = 0; x < i; x++)
 	{
 		if (needle[0] == '\0')
+		{
+			y = 0;
 			break;
+		}
 
 		if ((needle[0] == haystack[x]) && (haystack[x - 1] == '\0' || ' '))
 		{
