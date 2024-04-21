@@ -22,11 +22,11 @@ char *_strstr(char *haystack, char *needle)
 
 	for (x = 0; x < i; x++)
 	{
-		if ((needle[j] == haystack[x]) && ((haystack[x-1] == '\0') || (haystack[x-1] == ' ')))
+		if ((needle[0] == haystack[x]) && (haystack[x-1] == ('\0') || (' ')))
 		{
-			while ((needle[j + z] == haystack[x + z]) && (needle[j] == needle[0]))
+			while (needle[j + z] == haystack[x + z])
 			{
-				if ((haystack[x + (z + 1)] == ' ') || (haystack[x + (z + 1)] == '\0'))
+				if (haystack[x + (z + 1)] == (' ') || ('\0'))
 				{
 					if (needle[j + (z + 1)] == '\0')
 					{
