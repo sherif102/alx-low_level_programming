@@ -19,10 +19,10 @@ void print_diagsums(int *a, int size)
 	long unsigned int r1 = 0;
 	long unsigned int r2 = 0;
 
-	for (i = 0; i < (size * size); i += (size + 1))
+	for (i = 0; i < (size * size); i = i + (size + 1))
 		r1 = r1 + a[i];
 
-	for (i = (irev - (size - 1) ); i >= 0; i -= (size - 1))
+	for (i = (irev - (size - 1) ); i >= 0; i = i - (size - 1))
 		r2 = r2 + a[i];
 
 	printf("%lu, %lu\n", r1, r2);
