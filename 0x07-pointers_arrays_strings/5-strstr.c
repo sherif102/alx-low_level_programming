@@ -13,16 +13,16 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	unsigned int i = 0, j = 0, z = 0;
-	unsigned int x;
-	unsigned int y = -1;
+	int i = 0, j = 0, z = 0;
+	int x;
+	int y = -1;
 
 	while (haystack[i] != '\0')
 		i++;
 
 	for (x = 0; x < i; x++)
 	{
-		if ((needle[0] == haystack[x]) && (haystack[x-1] == ('\0') || (' ')))
+		if ((needle[0] == haystack[x]) && (haystack[x - 1] == '\0' || ' '))
 		{
 			while (needle[j + z] == haystack[x + z])
 			{
