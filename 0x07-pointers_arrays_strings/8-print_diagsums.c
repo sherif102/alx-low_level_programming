@@ -21,7 +21,7 @@ void print_diagsums(int *a, int size)
 	for (i = 0; i < (size * size); i = i + (size + 1))
 		r1 = r1 + a[i];
 
-	for (i = (irev - (size - 1) ); i >= (size - 1); i = i - (size - 1))
+	for (i = (irev - (size - 1)); i >= (size - 1); i = i - (size - 1))
 		r2 = r2 + a[i];
 
 	printf("%ld, %ld\n", r1, r2);
