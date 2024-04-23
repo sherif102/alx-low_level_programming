@@ -16,8 +16,7 @@ void print_diagsums(int *a, int size)
 {
 	int i;
 	int irev = (size * size) - 1;
-	long int r1 = 0;
-	long int r2 = 0;
+	long int r1 = 0, r2 = 0;
 
 	for (i = 0; i < (size * size); i = i + (size + 1))
 		r1 = r1 + a[i];
