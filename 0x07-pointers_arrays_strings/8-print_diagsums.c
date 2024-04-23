@@ -16,14 +16,14 @@ void print_diagsums(int *a, int size)
 {
 	int i;
 	int irev = (size * size) - 1;
-	unsigned int r1 = 0;
-	unsigned int r2 = 0;
+	long unsigned int r1 = 0;
+	long unsigned int r2 = 0;
 
 	for (i = 0; i < (size * size); i = i + (size + 1))
 		r1 = r1 + a[i];
 
-	for (i = (irev - (size - 1) ); i >= 0; i = i - (size - 1))
+	for (i = (irev - (size - 1) ); i >= (size - 1); i = i - (size - 1))
 		r2 = r2 + a[i];
 
-	printf("%d, %d\n", r1, r2);
+	printf("%lu, %lu\n", r1, r2);
 }
