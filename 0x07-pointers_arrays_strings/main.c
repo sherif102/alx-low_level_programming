@@ -1,17 +1,18 @@
-void print_diagsums(int *, int);
+#include "main.h"
+#include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
+ * main - check the code
  *
  * Return: Always 0.
  */
 int main(void)
 {
-	int c3[3][3] = {
-		{72635472, 652476, 23842634},
-		{2634534, 2782634, 63458345},
-		{3453454, 3453455, 28974827}
-	};
-	print_diagsums((int *)c3, 3);
-	return (0);
+    char *s0 = "Bob Dylan";
+    char *s1 = "Robert Allen";
+
+    printf("%s, %s\n", s0, s1);
+    set_string(&s1, s0);
+    printf("%s, %s\n", s0, s1);
+    return (0);
 }
