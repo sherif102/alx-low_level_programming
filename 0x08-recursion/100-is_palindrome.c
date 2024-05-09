@@ -15,7 +15,6 @@ int is_palindrome(char *s)
 {
 	int i = _strlen_recursion(s);
 
-	printf("%s\n", s);
 	if (i <= 1)
 		return (1);
 
