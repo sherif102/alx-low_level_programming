@@ -13,27 +13,15 @@
  */
 int is_palindrome(char *s)
 {
-	int i = 0;
-	int r, f, b;
+	int i = _strlen_recursion(s);
 
-	if (*s == (" " || "\0"))
+	printf("%s\n", s);
+	if (i <= 1)
 		return (1);
 
-	while (s[i])
-		i++;
+	if (s[0] != s[i - 1])
+		return (0);
 
-	b = i - 1;
-
-	for (f = 0; f < ((i / 2) + 1); f++)
-	{
-		if (s[f] != s[b])
-		{
-			r = 0;
-			break;
-		}
-		r = 1;
-		b--;
-	}
-
-	return (r);
+	s[i - 1] = '\0';
+	return is_palindrome(s + 1);
 }
