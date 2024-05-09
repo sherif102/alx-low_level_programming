@@ -22,5 +22,6 @@ int is_palindrome(char *s)
 		return (0);
 
 	s[i - 1] = '\0';
-	return is_palindrome(s + 1);
+
+	return (is_palindrome(s + 1));
 }
