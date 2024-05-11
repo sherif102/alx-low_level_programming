@@ -1,5 +1,7 @@
 #include "main.h"
 #include <stdio.h>
+
+int _strlen_recursion(char *s);
 /*
  * 100-is_palindrome.c
  *
@@ -24,4 +26,19 @@ int is_palindrome(char *s)
 	s[i - 1] = '\0';
 
 	return (is_palindrome(s + 1));
+}
+
+
+
+/**
+ * _strlen_recursion - calculates the length of the string
+ * @s: supplied string
+ * Return: string length
+ */
+int _strlen_recursion(char *s)
+{
+	if (!(*s))
+		return (0);
+
+	return (1 + _strlen_recursion(s + 1));
 }
