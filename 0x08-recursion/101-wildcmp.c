@@ -1,5 +1,7 @@
 #include "main.h"
 #include <stdio.h>
+
+int _strlen_recursion(char *s);
 /*
  * 101-wildcmp.c
  *
@@ -33,4 +35,13 @@ int wildcmp(char *s1, char *s2)
 		return wildcmp((s1 + 1), (s2 + 1));
 
 	return (r);
+}
+
+
+int _strlen_recursion(char *s)
+{
+	if (!(*s))
+		return (0);
+
+	return (1 + _strlen_recursion(s + 1));
 }
