@@ -10,7 +10,6 @@ int _strlen_recursion(char *s);
  */
 /**
  * wildcmp - compare two values and check if they are identical
- * _strlen_recursion - calculates the lenght of the string
  * @s1: the first string
  * @s2: the second string
  * Return: 1 if true otherwise 0
@@ -38,7 +37,11 @@ int wildcmp(char *s1, char *s2)
 	return (r);
 }
 
-
+/**
+ * _strlen_recursion - calculates the length of the string
+ * @s: supplied string
+ * Return: string length
+ */
 int _strlen_recursion(char *s)
 {
 	if (!(*s))
