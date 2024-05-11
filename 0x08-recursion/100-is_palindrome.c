@@ -15,19 +15,23 @@ int _strlen_recursion(char *s);
  */
 int is_palindrome(char *s)
 {
+	int r = 0;
 	int i = _strlen_recursion(s);
 
 	if (i <= 1)
 		return (1);
-
 	if (s[0] != s[i - 1])
 		return (0);
 
-	s[i - 1] = '\0';
+	if (s[0] == s[i - 1])
+	{
+		r = 1;
+		s[i - 1] = '\0';
+		return (is_palindrome(s + 1));
+	}
 
-	return (is_palindrome(s + 1));
+	return (r);
 }
-
 
 
 /**

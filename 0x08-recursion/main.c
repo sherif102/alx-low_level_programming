@@ -10,6 +10,8 @@ int main(void)
 {
     int r;
 
+    r = is_palindrome("aa");
+    printf("%d\n", r);
     r = is_palindrome("level");
     printf("%d\n", r);
     r = is_palindrome("redder");
