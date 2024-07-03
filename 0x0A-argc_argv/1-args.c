@@ -9,6 +9,7 @@
 
 int main(int argc, char **argv)
 {
-	printf("%d\n", argc - 1);
+	int x = argc;
+	printf("%d\n", x);
 	return (0);
 }
