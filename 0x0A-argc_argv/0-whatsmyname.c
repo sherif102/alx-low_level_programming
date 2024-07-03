@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-/*
+/**
  * main - the main function
  * @argc: number of arguments
  * @argv: arguments array
- * return: Success
+ * Return: Success
  */
 
 int main(int argc, char **argv)
