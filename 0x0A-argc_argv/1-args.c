@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - the main function
+ * main - main function used
  * @argc: number of arguments
- * @argv: arguments array
+ * @argv: arguments array list
  * Return: Success
  */
 
@@ -12,7 +12,9 @@ int main(int argc, char **argv)
 	int x = 0;
 
 	while (argv[x])
+	{
 		x++;
+	}
 
 	printf("%d\n", x - 1);
 	return (0);
