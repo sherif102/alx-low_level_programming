@@ -9,8 +9,8 @@
 
 int main(int argc, char **argv)
 {
-	int x = argc;
+	int x = argc - 1;
 
-	printf("%d\n", x - 1);
+	printf("%d\n", x);
 	return (0);
 }
