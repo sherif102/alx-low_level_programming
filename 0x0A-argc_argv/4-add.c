@@ -15,12 +15,6 @@ int main(int argc, char **argv)
 	int v;
 	int y;
 
-	if (argc == 1)
-	{
-		printf("0\n");
-		return (0);
-	}
-
 	while (argc-- && (argc > 0))
 	{
 		for (v = 0; v < strlen(argv[argc]); v++)
