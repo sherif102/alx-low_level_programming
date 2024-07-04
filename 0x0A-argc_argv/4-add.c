@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * main - the main program
@@ -11,6 +12,8 @@
 int main(int argc, char **argv)
 {
 	int x = 0;
+	int v;
+	int y;
 
 	if (argc == 1)
 	{
@@ -20,10 +23,15 @@ int main(int argc, char **argv)
 
 	while (argc-- && (argc > 0))
 	{
-		if (!(atoi(argv[argc])))
+		for (v = 0; v < strlen(argv[argc]); v++)
 		{
-			printf("Error\n");
-			return (1);
+			y = argv[argc][v];
+
+			if ((y < 48) || (y > 57))
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
 		x += atoi(argv[argc]);
 	}
