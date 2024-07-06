@@ -9,7 +9,13 @@
 
 int main(int argc, char **argv)
 {
-	printf("%d\n", argc);
+	if (argc < 2)
+	{
+		printf("0\n");
+		return (0);
+	}
+
+	printf("%d\n", argc - 1);
 
 	return (0);
 }
