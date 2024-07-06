@@ -9,14 +9,7 @@
 
 int main(int argc, char **argv)
 {
-	int x = 0;
-
-	while (argv[x])
-		x++;
-
-	x--;
-
-	printf("%d\n", x);
+	printf("%d\n", argc);
 
 	return (0);
 }
