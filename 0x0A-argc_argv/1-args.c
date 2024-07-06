@@ -4,7 +4,7 @@
  * main - main function used
  * @argc: number of arguments
  * @argv: arguments array list
- * Return: Success
+ * Return: success
  */
 
 int main(int argc, char **argv)
