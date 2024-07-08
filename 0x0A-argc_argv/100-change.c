@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 	v = atoi(argv[1]);
 
 	if (v < 0)
-		printf("0\n");
+		x = 0;
 	if (v >= 25)
 	{
 		x += v / 25;
