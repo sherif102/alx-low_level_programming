@@ -1,10 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
-/*
- * 1-strdup.c
- *
- *  Created on: Jul 15, 2024
- *      Author: hyper
+
+/**
  * _strdup - returns pointer to newly allocated memory space
  * @str: new string
  * Return: pointer to string if success otherwise NULL
@@ -12,12 +9,17 @@
 char *_strdup(char *str)
 {
 	char *s;
-	int x = 0;
+	unsigned int x = 0;
 
-	s = malloc(sizeof(char) * sizeof(str));
+	while (str[x] != '\0')
+		x++;
+
+	s = malloc(sizeof(char) * x);
 
 	if (str == NULL)
 		return (NULL);
+
+	x = 0;
 
 	while (str[x] != '\0')
 	{
