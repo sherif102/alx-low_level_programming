@@ -10,8 +10,10 @@
 
 char *create_array(unsigned int size, char c)
 {
-	char *ap = malloc(size * sizeof(c));
+	char *ap;
 	unsigned int x;
+
+	ap = malloc(size * sizeof(c));
 
 	if (size == 0)
 		return (NULL);
@@ -19,7 +21,7 @@ char *create_array(unsigned int size, char c)
 	for (x = 0; x < size; x++)
 		*(ap + x) = c;
 
-	if (ap == 0)
+	if (!(ap))
 		return (NULL);
 
 	return (ap);
