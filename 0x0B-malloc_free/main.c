@@ -42,7 +42,7 @@ int main(void)
 	unsigned int size;
 
 	size = 72;
-	buffer = create_array(size, 'S');
+	buffer = create_array(size, '6');
 	if (buffer == NULL)
 	{
 		printf("failed to allocate memory\n");
