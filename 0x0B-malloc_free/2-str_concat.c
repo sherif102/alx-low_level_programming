@@ -1,10 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
+
 /**
- * 2-str_concat.c
- *
- *  Created on: Jul 15, 2024
- *      Author: hyper
  * str_concat - concatenates two strings
  * @s1: string 1
  * @s2: string 2
@@ -19,6 +16,10 @@ char *str_concat(char *s1, char *s2)
 
 	if ((s1 == NULL) && (s2 == NULL))
 		return (NULL);
+	if (s1 == NULL)
+		s1 = '\0';
+	if (s2 == NULL)
+		s2 = '\0';
 
 	while (s1[x] != '\0')
 		x++;
@@ -27,7 +28,7 @@ char *str_concat(char *s1, char *s2)
 		x++;
 		y++;
 	}
-	i = x;
+	i = x + 1;
 	x = 0;
 	y = 0;
 
