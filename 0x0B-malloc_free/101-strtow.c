@@ -9,10 +9,7 @@
 
 char **strtow(char *str)
 {
-	int i, j;
-	int u = 0;
-	int cc = 0;
-	int x = 0;
+	int i, j, u = 0, x = 0, cc = 0;
 	char **sp;
 
 	if (str == NULL || *str == '\0')
@@ -20,7 +17,7 @@ char **strtow(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if ((str[i] != ' ') && (str[i + 1] ==  ' ' || str[i + 1] == '\0'))
+		if ((str[i] != ' ') && (str[i + 1] ==  ' ' || '\0'))
 			u++;
 	}
 
@@ -48,6 +45,7 @@ char **strtow(char *str)
 
 			for (j = 0; j < cc; j++, i++)
 				sp[x][j] = str[i];
+			i++;
 			sp[x][j] = '\0';
 			x++;
 		}
