@@ -22,7 +22,7 @@ char **strtow(char *str)
 	}
 
 	sp = malloc((u + 1) * sizeof(char *));
-	if (sp == NULL)
+	if (sp == NULL || u == 0)
 		return (NULL);
 
 	i = 0;
@@ -45,7 +45,6 @@ char **strtow(char *str)
 
 			for (j = 0; j < cc; j++, i++)
 				sp[x][j] = str[i];
-			i++;
 			sp[x][j] = '\0';
 			x++;
 		}
