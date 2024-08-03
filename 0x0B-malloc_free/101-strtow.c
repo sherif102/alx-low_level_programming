@@ -18,7 +18,7 @@ char **strtow(char *str)
 		if ((str[i] != ' ') && (str[i + 1] ==  ' ' || '\0'))
 			u++;
 	}
-	sp = malloc((u + 2) * sizeof(char *));
+	sp = malloc((u + 1) * sizeof(char *));
 	if (sp == NULL || u == 0)
 		return (NULL);
 
