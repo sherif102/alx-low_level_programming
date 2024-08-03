@@ -34,7 +34,7 @@ char **strtow(char *str)
 				cc++;
 				j++;
 			}
-			sp[x] = malloc((cc + 1) * sizeof(char));
+			sp[x] = malloc((cc + 2) * sizeof(char));
 			if (sp[x] == NULL)
 			{
 				for (i = 0; i < x; i++)
