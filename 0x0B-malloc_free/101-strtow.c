@@ -6,7 +6,6 @@
  * Return: pointer to the array of split strings
  */
 
-
 char **strtow(char *str)
 {
 	int i, j, u = 0, x = 0, cc = 0;
@@ -14,13 +13,11 @@ char **strtow(char *str)
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
-
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		if ((str[i] != ' ') && (str[i + 1] ==  ' ' || '\0'))
 			u++;
 	}
-
 	sp = malloc((u + 1) * sizeof(char *));
 	if (sp == NULL || u == 0)
 		return (NULL);
@@ -31,9 +28,12 @@ char **strtow(char *str)
 		if ((str[i] != ' ') && ((str[i - 1] == ' ') || i == 0))
 		{
 			j = i;
-			for (cc = 0; (str[j] != ' ' || '\0'); cc++)
+			cc = 0;
+			while (str[j] != ' ' && str[j] != '\0')
+			{
+				cc++;
 				j++;
-
+			}
 			sp[x] = malloc((cc + 1) * sizeof(char));
 			if (sp[x] == NULL)
 			{
@@ -42,18 +42,13 @@ char **strtow(char *str)
 				free(sp);
 				return (NULL);
 			}
-
 			for (j = 0; j < cc; j++, i++)
 				sp[x][j] = str[i];
 			sp[x][j] = '\0';
 			x++;
 		}
-		else
-		{
-			i++;
-		}
+		i++;
 	}
 	sp[x] = NULL;
-
 	return (sp);
 }
