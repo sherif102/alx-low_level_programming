@@ -15,7 +15,7 @@ int main(int argc, char **argv)
 	if (argc != 3)
 	{
 		printf("Error\n");
-		exit(98);
+		return (98);
 	}
 
 	for (y = 0; argv[1][y] != '\0'; y++)
@@ -23,7 +23,7 @@ int main(int argc, char **argv)
 		if (!isdigit(argv[1][y]))
 		{
 			printf("Error\n");
-			exit(98);
+			return (98);
 		}
 	}
 	for (y = 0; argv[2][y] != '\0'; y++)
@@ -31,7 +31,7 @@ int main(int argc, char **argv)
 		if (!isdigit(argv[2][y]))
 		{
 			printf("Error\n");
-			exit(98);
+			return (98);
 		}
 	}
 
