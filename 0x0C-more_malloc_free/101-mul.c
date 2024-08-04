@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <ctype.h>
-
 /**
  * main - the main function
  * @argc: number of argument
@@ -11,7 +10,7 @@
  */
 int main(int argc, char **argv)
 {
-	unsigned int x, y;
+	unsigned long int x, y;
 
 	if (argc != 3)
 	{
@@ -36,8 +35,8 @@ int main(int argc, char **argv)
 		}
 	}
 
-	x = atoi(argv[1]) * atoi(argv[2]);
-	printf("%u\n", x);
+	x = atol(argv[1]) * atol(argv[2]);
+	printf("%lu\n", x);
 
 	return (0);
 }
