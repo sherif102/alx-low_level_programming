@@ -20,7 +20,7 @@ int main(int argc, char **argv)
 
 	for (y = 0; argv[1][y] != '\0'; y++)
 	{
-		if (argv[1][y] > 57 || argv[1][y] < 48)
+		if (!isdigit(argv[1][y]))
 		{
 			printf("Error\n");
 			exit(98);
@@ -28,7 +28,7 @@ int main(int argc, char **argv)
 	}
 	for (y = 0; argv[2][y] != '\0'; y++)
 	{
-		if (argv[2][y] > 57 || argv[2][y] < 48)
+		if (!isdigit(argv[2][y]))
 		{
 			printf("Error\n");
 			exit(98);
