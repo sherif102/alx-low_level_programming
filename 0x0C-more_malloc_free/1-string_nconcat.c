@@ -2,12 +2,17 @@
 #include <stdlib.h>
 /**
  * string_nconcat - concatenate two strings
+ * @s1: first string
+ * @s2: second string
+ * @n: integer size to be copied in s2
+ * Return: pointer to the new copied string
  */
-
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int x = 0, y = 0, z = 0;
+	unsigned int x = 0;
+	unsigned int y = 0;
+	unsigned int z = 0;
 	char *sp;
 
 	if (s1 == NULL)
@@ -32,6 +37,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		x++;
 	}
 	y = 0;
+
 	while (y < z)
 	{
 		sp[x] = s2[y];
