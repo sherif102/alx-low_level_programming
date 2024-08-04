@@ -1,0 +1,43 @@
+#include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include <ctype.h>
+
+/**
+ * main - the main function
+ * @argc: number of argument
+ * @argv: argument array
+ * Return: multiplied result of arg1 and arg2
+ */
+int main(int argc, char **argv)
+{
+	unsigned int x, y;
+
+	if (argc != 3)
+	{
+		printf("Error\n");
+		exit(98);
+	}
+
+	for (y = 0; argv[1][y] != '\0'; y++)
+	{
+		if (argv[1][y] > 57 || argv[1][y] < 48)
+		{
+			printf("Error\n");
+			exit(98);
+		}
+	}
+	for (y = 0; argv[2][y] != '\0'; y++)
+	{
+		if (argv[2][y] > 57 || argv[2][y] < 48)
+		{
+			printf("Error\n");
+			exit(98);
+		}
+	}
+
+	x = atoi(argv[1]) * atoi(argv[2]);
+	printf("%u\n", x);
+
+	return (0);
+}
