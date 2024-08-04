@@ -3,13 +3,13 @@
 /**
  * malloc_checked - allocates memory
  * @b: value passed
- * Return: 98 on failure
+ * Return: pointer to allocated memory or 98 on failure
  */
 void *malloc_checked(unsigned int b)
 {
-	unsigned int *i;
+	void *i;
 
-	i = malloc(sizeof(i) * (b + 1));
+	i = malloc(b);
 	if (i == NULL)
 		exit(98);
 
