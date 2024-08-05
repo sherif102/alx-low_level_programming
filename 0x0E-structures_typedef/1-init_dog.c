@@ -1,4 +1,3 @@
-#include "dog.h"
 #include "main.h"
 /**
  * init_dog - initializes the dog structure
