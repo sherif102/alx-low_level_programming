@@ -7,12 +7,12 @@
  * @owner: dog owner
  * Description: This is a structure defining dog information
  */
-struct dog
+typedef struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-};
+} dog_t;
 #endif /* DOG */
 
 #ifndef INIT_DOG
