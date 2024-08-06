@@ -1,4 +1,8 @@
+#ifndef STD_DEF
+#define STD_DEF
 #include <stddef.h>
+#endif /* STD_DEF */
+
 #ifndef PUTCHAR
 #define PUTCHAR
 char _putchar(char c);
