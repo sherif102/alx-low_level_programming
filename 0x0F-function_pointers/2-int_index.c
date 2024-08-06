@@ -1,6 +1,5 @@
 #include "function_pointers.h"
 #include <stdlib.h>
-#include <stdbool.h>
 /**
  * int_index - searches for an integer
  * @array: supplied array to be searched
@@ -10,7 +9,7 @@
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	unsigned int x;
+	int x;
 
 	if (size <= 0)
 		return (-1);
