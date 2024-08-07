@@ -1,5 +1,5 @@
-#ifndef OP_T
-#define OP_T
+#ifndef OP
+#define OP
 /**
  * struct op - struct op
  * @op: the operator
@@ -10,6 +10,11 @@ typedef struct op
 	char *op;
 	int (*f)(int a, int b);
 } opt_t;
+#endif /* OP */
+
+#ifndef OP_T
+#define OP_T
+typedef struct op op_t;
 #endif /* OP_T */
 
 #ifndef OP_ADD
