@@ -11,7 +11,7 @@ int main(int argc, char **argv)
 	unsigned char *pt;
 	unsigned int x;
 
-	pt = (unsigned char*)main;
+	pt = (unsigned char *)main;
 
 	if (argc != 2)
 	{
@@ -26,14 +26,12 @@ int main(int argc, char **argv)
 
 	for (x = 0; x < atoi(argv[1]); x++)
 	{
-		if (atoi(argv[1]))
-		{
-			printf("%02x", pt[x]);
+		printf("%02x", pt[x]);
 
-			if (x != (atoi(argv[1]) - 1))
-				printf(" ");
-		}
+		if (x != (atoi(argv[1]) - 1))
+			printf(" ");
 	}
+
 	printf("\n");
 
 	return (0);
