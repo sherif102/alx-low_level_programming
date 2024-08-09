@@ -10,6 +10,7 @@
 int sum_them_all(const unsigned int n, ...)
 {
 	unsigned int result = 0;
+	int x;
 
 	va_list np;
 
@@ -18,7 +19,7 @@ int sum_them_all(const unsigned int n, ...)
 	if (n == 0)
 		return (0);
 
-	for (int x = 0; x < n; x++)
+	for (x = 0; x < n; x++)
 	{
 		result += va_arg(np, int);
 	}
