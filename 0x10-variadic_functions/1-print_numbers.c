@@ -10,8 +10,8 @@
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	int x, y, z;
-	va_list np;
 	char str[20];
+	va_list np;
 
 	va_start(np, n);
 
