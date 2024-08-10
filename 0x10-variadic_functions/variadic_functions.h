@@ -1,6 +1,6 @@
 #ifndef _PUTCHAR
 #define _PUTCHAR
-int _putchar(char c);
+char _putchar(char c);
 #endif /* _PUTCHAR */
 
 #ifndef SUM_THEM_ALL
