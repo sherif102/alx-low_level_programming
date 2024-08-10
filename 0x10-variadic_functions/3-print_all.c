@@ -45,6 +45,6 @@ void print_all(const char * const format, ...)
 			printf(", ");
 		x++;
 	}
-	printf("%s", (format != NULL) ? es : "");
+	printf("%s", (format != NULL) ? es : "\n");
 	va_end(ap);
 }
