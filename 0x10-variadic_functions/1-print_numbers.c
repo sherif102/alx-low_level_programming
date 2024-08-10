@@ -1,6 +1,5 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
-#include <stdlib.h>
 /**
  * print_numbers - print numbers
  * @separator: what to separate each number
@@ -18,6 +17,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	for (x = 0; x < n; x++)
 	{
 		z = va_arg(np, int);
+
 		if (z < 0)
 		{
 			z = -(z);
@@ -33,7 +33,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			str[y++] = z % 10;
 			z = z / 10;
 		}
-
 		while (y-- > 0)
 			_putchar(str[y] + '0');
 
@@ -45,5 +44,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		}
 	}
 	va_end(np);
+
 	_putchar('\n');
 }
