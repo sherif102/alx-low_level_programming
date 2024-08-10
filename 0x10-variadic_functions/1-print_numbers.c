@@ -10,7 +10,7 @@
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	int x, y, z;
-	char str[100];
+	char str[20];
 	va_list np;
 
 	va_start(np, n);
@@ -44,6 +44,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 				_putchar(separator[y++]);
 		}
 	}
-	va_end(np);
 	_putchar('\n');
+	va_end(np);
 }
