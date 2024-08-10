@@ -22,47 +22,43 @@ void print_all(const char * const format, ...)
 	while (*(format + x) != '\0')
 	{
 		t = *(format + x);
-		if (t == 'c' || t == 'i' || t == 'f' || t == 's')
+		if ((t == 'c' || t == 'i' || t == 'f' || t == 's'))
 		{
-		switch (*(format + x))
-		{  /* switch start */
-		case 'c':
-		{
-			c = (char) va_arg(ap, int);
-			printf("%c", c);
-			break;
-		}
-		case 'i':
-		{
-			i = va_arg(ap, int);
-			printf("%d", i);
-			break;
-		}
-		case 'f':
-		{
-			f = va_arg(ap, double);
-			printf("%f", f);
-			break;
-		}
-		case 's':
-		{
-			s = va_arg(ap, char *);
-			if (s == NULL)
+			switch (*(format + x))
 			{
-				printf("(nil)");
-				break;
+				case 'c':
+				{
+					c = (char) va_arg(ap, int);
+					printf("%c", c);
+					break;
+				}
+				case 'i':
+				{
+					i = va_arg(ap, int);
+					printf("%d", i);
+					break;
+				}
+				case 'f':
+				{
+					f = va_arg(ap, double);
+					printf("%f", f);
+					break;
+				}
+				case 's':
+				{
+					s = va_arg(ap, char *);
+					printf("%s", s);
+					break;
+				}
+				default:
+					break;
 			}
-			printf("%s", s);
-			break;
-		}
-		}
 
-		if (*(format + (x + 1)) != '\0')
-			printf(", ");
-		} /* switch end */
+			if (*(format + (x + 1)) != '\0')
+				printf(", ");
+		}
 		x++;
 	}
-
 	va_end(ap);
 	printf("\n");
 }
