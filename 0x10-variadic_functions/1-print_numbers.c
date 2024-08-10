@@ -18,7 +18,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	for (x = 0; x < n; x++)
 	{
 		z = va_arg(np, int);
-
 		if (z < 0)
 		{
 			z = -(z);
@@ -45,6 +44,5 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		}
 	}
 	va_end(np);
-
 	_putchar('\n');
 }
