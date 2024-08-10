@@ -33,6 +33,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			str[y++] = z % 10;
 			z = z / 10;
 		}
+		str[y] = '\0';
 		while (y-- > 0)
 			_putchar(str[y] + '0');
 
