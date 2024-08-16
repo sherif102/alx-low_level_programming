@@ -52,5 +52,5 @@ void free_list(list_t *head);
 
 #ifndef BEFORE_MAIN
 #define BEFORE_MAIN
-void before_main() __attribute__((constructor));
+void before_main(void) __attribute__((constructor));
 #endif /* BEFORE_MAIN */
