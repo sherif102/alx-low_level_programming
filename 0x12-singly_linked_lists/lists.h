@@ -49,3 +49,8 @@ list_t *add_node_end(list_t **head, const char *str);
 #define FREE_LIST
 void free_list(list_t *head);
 #endif /* FREE_LIST */
+
+#ifndef BEFORE_MAIN
+#define BEFORE_MAIN
+void before_main() __attribute__((constructor));
+#endif /* BEFORE_MAIN */
