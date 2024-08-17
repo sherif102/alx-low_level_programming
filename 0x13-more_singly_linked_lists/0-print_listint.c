@@ -3,7 +3,7 @@
 #include <stdio.h>
 /**
  * print_listint - prints all element in a list
- * @h function parsed
+ * @h: function parsed
  * Return: number of nodes
  */
 size_t print_listint(const listint_t *h)
