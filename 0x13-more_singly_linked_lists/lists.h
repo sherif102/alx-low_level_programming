@@ -68,3 +68,8 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
 #define SUM_LISTINT
 int sum_listint(listint_t *head);
 #endif /* SUM_LISTINT */
+
+#ifndef INSERT_NODEINT_AT_INDEX
+#define INSERT_NODEINT_AT_INDEX
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
+#endif /* INSERT_NODEINT_AT_INDEX */
