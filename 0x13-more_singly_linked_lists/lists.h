@@ -43,3 +43,8 @@ listint_t *add_nodeint(listint_t **head, const int n);
 #define ADD_NODEINT_END
 listint_t *add_nodeint_end(listint_t **head, const int n);
 #endif /* ADD_NODEINT_END */
+
+#ifndef FREE_LISTINT
+#define FREE_LISTINT
+void free_listint(listint_t *head);
+#endif /* FREE_LISTINT */
