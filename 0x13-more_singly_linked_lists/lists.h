@@ -58,3 +58,8 @@ void free_listint2(listint_t **head);
 #define POP_LISTINT
 int pop_listint(listint_t **head);
 #endif /* POP_LISTINT */
+
+#ifndef GET_NODEINT_AT_INDEX
+#define GET_NODEINT_AT_INDEX
+listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
+#endif /* GET_NODEINT_AT_INDEX */
