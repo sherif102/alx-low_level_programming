@@ -53,3 +53,8 @@ void free_listint(listint_t *head);
 #define FREE_LISTINT2
 void free_listint2(listint_t **head);
 #endif /* FREE_LISTINT2 */
+
+#ifndef POP_LISTINT
+#define POP_LISTINT
+int pop_listint(listint_t **head);
+#endif /* POP_LISTINT */
