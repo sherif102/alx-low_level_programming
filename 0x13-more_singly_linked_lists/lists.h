@@ -88,3 +88,8 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index);
 #define REVERSE_LISTINT
 listint_t *reverse_listint(listint_t **head);
 #endif /* REVERSE_LISTINT */
+
+#ifndef PRINT_LISTINT_SAFE
+#define PRINT_LISTINT_SAFE
+size_t print_listint_safe(const listint_t *head);
+#endif /* PRINT_LISTINT_SAFE */
