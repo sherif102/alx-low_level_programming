@@ -25,12 +25,5 @@ size_t print_listint_safe(const listint_t *head)
 		temp = temp->next;
 	}
 
-	next = head->next;
-	if (next->next == head)
-	{
-		printf("-> [%p] %d\n", (void *)head->next, head->next->n);
-		printf("-> [%p] %d\n", (void *)next->next, next->next->n);
-		node_count = 2;
-	}
 	return (node_count);
 }
