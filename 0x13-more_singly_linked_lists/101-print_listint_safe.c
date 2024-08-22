@@ -14,7 +14,6 @@ size_t print_listint_safe(const listint_t *head)
 
 	while (temp != NULL && head != NULL)
 	{
-		node_count++;
 		printf("[%p] %d\n", (void *)temp, temp->n);
 		temp = temp->next;
 
@@ -27,6 +26,7 @@ size_t print_listint_safe(const listint_t *head)
 				exit(98);
 			}
 		}
+		node_count++;
 	}
 	return (node_count);
 }
