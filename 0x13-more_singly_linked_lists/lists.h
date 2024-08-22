@@ -98,3 +98,8 @@ size_t print_listint_safe(const listint_t *head);
 #define FREE_LISTINT_SAFE
 size_t free_listint_safe(listint_t **h);
 #endif /* FREE_LISTINT_SAFE */
+
+#ifndef FIND_LISTINT_LOOP
+#define FIND_LISTINT_LOOP
+listint_t *find_listint_loop(listint_t *head);
+#endif /* FIND_LISTINT_LOOP */
