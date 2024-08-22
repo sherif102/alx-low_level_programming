@@ -93,3 +93,8 @@ listint_t *reverse_listint(listint_t **head);
 #define PRINT_LISTINT_SAFE
 size_t print_listint_safe(const listint_t *head);
 #endif /* PRINT_LISTINT_SAFE */
+
+#ifndef FREE_LISTINT_SAFE
+#define FREE_LISTINT_SAFE
+size_t free_listint_safe(listint_t **h);
+#endif /* FREE_LISTINT_SAFE */
