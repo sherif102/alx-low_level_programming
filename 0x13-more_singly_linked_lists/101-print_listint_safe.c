@@ -8,11 +8,11 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t node_count = 1;
+	size_t node_count = 0;
 	const listint_t *temp = head;
 	const listint_t *fast = head;
 
-	while (temp != NULL)
+	while (temp != NULL && head != NULL)
 	{
 		node_count++;
 		printf("[%p] %d\n", (void *)temp, temp->n);
