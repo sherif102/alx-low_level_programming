@@ -12,7 +12,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 	if (index > 63)
 		return (-1);
 
-	while (index > 0)
+	while (index > 1)
 	{
 		x = x * 2;
 		index--;
