@@ -19,7 +19,10 @@ int set_bit(unsigned long int *n, unsigned int index)
 		index--;
 	}
 
-	r = *n | x;
+	if (r > x)
+		r = *n | x;
+	else
+		return (-1);
 
 	return (r);
 }
