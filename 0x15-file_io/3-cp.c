@@ -18,9 +18,9 @@ int main(int argc, char **argv)
 		exit(97);
 	}
 
-	if (argv[1] == NULL)
+	if (argv[1] == NULL || !argv[1])
 	{
-		dprintf(2, "Error: Can't read from the %s\n", argv[1]);
+		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 
