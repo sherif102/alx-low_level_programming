@@ -3,7 +3,12 @@
 #include <fcntl.h>
 #include <stdio.h>
 #include <unistd.h>
-
+/**
+ * main - copy file from and to
+ * @argc: number of argument supplied
+ * @argv: argument parsed
+ * Return: success
+ */
 
 
 int main(int argc, char **argv)
@@ -16,12 +21,6 @@ int main(int argc, char **argv)
 	{
 		dprintf(2, "Usage: cp file_from file_to\n");
 		exit(97);
-	}
-
-	if (argv[1] == NULL || !argv[1])
-	{
-		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
 	}
 
 	fd1 = open(argv[1], O_RDONLY);
@@ -69,5 +68,5 @@ int main(int argc, char **argv)
 		exit(100);
 	}
 
-	return (read1);
+	return (0);
 }
