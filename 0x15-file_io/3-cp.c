@@ -11,8 +11,8 @@ int main(int argc, char **argv)
 	int fd2;
 	ssize_t read1 = 0;
 	ssize_t write2 = 0;
-	ssize_t i = 1024;
-	char *buffer;
+	ssize_t i = 0;
+	char buffer[1024];
 
 	if (argc != 3)
 	{
@@ -26,10 +26,6 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 
-	buffer = malloc(i);
-	if (buffer == NULL)
-		exit(98); /* to be checked later */
-
 	fd1 = open(argv[1], O_RDONLY);
 	if (fd1 == -1)
 	{
@@ -37,13 +33,15 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 
-	read1 = read(fd1, buffer, i);
+	read1 = read(fd1, buffer, 1024);
 	if (read1 == -1)
 	{
 		dprintf(fd1, "Error: Can't read from the %s\n", argv[1]);
 		exit(98);
 	}
 
+	while (buffer[i] != '\0')
+		i++;
 
 	fd2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fd2 == -1)
