@@ -27,7 +27,7 @@ int main(int argc, char **argv)
 	fd1 = open(argv[1], O_RDONLY);
 	if (fd1 == -1)
 	{
-		dprintf(2, "Error: Can't read from the %s\n", argv[1]);
+		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 
@@ -52,7 +52,7 @@ int main(int argc, char **argv)
 	}
 	if (read1 == -1)
 	{
-		dprintf(2, "Error: Can't read from the %s\n", argv[1]);
+		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 		close(fd1);
 		close(fd2);
 		exit(98);
@@ -69,5 +69,5 @@ int main(int argc, char **argv)
 		exit(100);
 	}
 
-	return (0);
+	return (read1);
 }
