@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "lists.h"
 
-/*
+/**
  * print_dlistint - print elements in a doubly linked list
  * @h: head parsed
  * Return: number of elements there
