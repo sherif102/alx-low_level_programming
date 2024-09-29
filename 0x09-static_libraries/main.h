@@ -1,4 +1,4 @@
-#ifnfdef _STATIC_LIBRARY
+#ifndef _STATIC_LIBRARY
 #define _STATIC_LIBRARY
 int _putchar(char c);
 int _islower(int c);
