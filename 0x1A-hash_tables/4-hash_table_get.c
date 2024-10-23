@@ -12,7 +12,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	char *value;
 	unsigned long int index = key_index((const unsigned char *)key, ht->size);
 
-	if (ht->array[index] == NULL || key == NULL)
+	if (ht->array[index] == NULL || ht == NULL)
 		return (NULL);
 
 	value = strdup(ht->array[index]->value);
