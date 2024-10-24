@@ -23,10 +23,10 @@ void hash_table_print(const hash_table_t *ht)
 	output[oi++] = '{';
 	for (ti = 0; ti < ht->size; ti++)
 	{
-		if (ht->array[ti] != NULL && ht->array[ti - 1] != NULL)
-			datacopy(output, "', ", &oi, &bc);
 		if (ht->array[ti] != NULL)
 		{
+			if (output[oi - 1] == '\'')
+				datacopy(output, ", ", &oi, &bc);
 			temp = ht->array[ti];
 			while (temp != NULL)
 			{
@@ -34,9 +34,10 @@ void hash_table_print(const hash_table_t *ht)
 				datacopy(output, temp->key, &oi, &bc);
 				datacopy(output, "': '", &oi, &bc);
 				datacopy(output, temp->value, &oi, &bc);
+				output[oi++] = '\'';
 				temp = temp->next;
 				if (temp != NULL)
-					datacopy(output, "', ", &oi, &bc);
+					datacopy(output, ", ", &oi, &bc);
 			}
 		}
 	}
