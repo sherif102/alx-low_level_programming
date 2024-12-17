@@ -1,0 +1,3 @@
+all := $(wildcard *.c)
+school:
+	gcc $(all) -o $@
