@@ -7,25 +7,28 @@ Author: Sheriff Abdulfatai
 
 def island_perimeter(grid):
     """ a function that return the perimeter of the
-    island described in grid """
-    column_count = 0
-    row_count = 0
-    column = 0
+    island described in grid
+    1 represent land and 0 represent water """
+    perimeter = 0
     row = 0
+    nc = len(grid[1]) - 1
+    nr = len(grid) - 1
     if len(grid) < 1 or len(grid) > 100:
         return 0
-    for i in grid:
-        if len(i) < 1 or len(i) > 100:
+    for i in range(len(grid)):
+        if len(grid[row]) < 1 or len(grid[row]) > 100:
             return 0
-        for j in i:
-            if j == 1:
-                column_count += 1
-
-        if column < column_count:
-            column = column_count
-        if column_count > 0:
-            row += 1
-
-        column_count = 0
-
-    return ((column * 2) + (row * 2))
+        for j in range(len(grid[row])):
+            if len(grid[row]) != len(grid[1]):
+                return 0
+            if grid[i][j] == 1:
+                if i == 0 or grid[i - 1][j] == 0:
+                    perimeter += 1
+                if j == 0 or grid[i][j - 1] == 0:
+                    perimeter += 1
+                if i == nr or grid[i + 1][j] == 0:
+                    perimeter += 1
+                if j == nc or grid[i][j + 1] == 0:
+                    perimeter += 1
+        row += 1
+    return perimeter
