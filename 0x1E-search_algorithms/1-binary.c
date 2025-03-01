@@ -8,8 +8,8 @@
  * Return: success
  */
 
- int binary_search(int *array, size_t size, int value)
- {
+int binary_search(int *array, size_t size, int value)
+{
 	int L, R, m;
 
 	L = 0;
@@ -31,22 +31,22 @@
 		}
 	}
 	return (-1);
- }
+}
 
 
- /**
-  * array_printer - print array
-  * @array: array to print
-  * @start: starting point
-  * @stop: ending point
-  * Return: success
-  */
- void array_printer(int *array, int start, int stop)
- {
+/**
+ * array_printer - print array
+ * @array: array to print
+ * @start: starting point
+ * @stop: ending point
+ * Return: success
+ */
+void array_printer(int *array, int start, int stop)
+{
 	int counter = start;
 
 	printf("Searching in array: ");
 	while (counter < stop)
 		printf("%d, ", array[counter++]);
 	printf("%d\n", array[stop]);
- }
+}
